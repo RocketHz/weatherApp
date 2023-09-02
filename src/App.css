@@ -1,0 +1,118 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "JetBrains Mono", monospace;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    padding: 30px;
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background: rgba(0, 255, 221, 0.275);
+    backdrop-filter: blur(1px);
+}
+
+.container__title {
+    font-weight: 800;
+    text-align: center;
+}
+
+.container__subtitle {
+    text-align: center;
+}
+
+.background-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card {
+    width: 342px;
+    height: 243px;
+    position: relative;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cloud {
+    position: absolute;
+    right: 0;
+    top: -12px;
+}
+
+.cloud svg {
+    height: 120px;
+}
+
+.card .main-text {
+    font-size: 48px;
+    z-index: 2;
+}
+
+.card .info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .info .text-gray {
+    color: rgb(0, 0, 0);
+}
+
+.card .info .info-right {
+    align-self: flex-end;
+    align-items: center;
+    appearance: none;
+    background-color: #075b823b;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.2) 0 2px 4px,
+        rgba(45, 35, 66, 0.15) 0 7px 13px -3px, #000000 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #000109;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow 0.15s, transform 0.15s;
+    user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+}
+
+.info-right:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(73, 31, 164, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+   }
+
+   .info-right:hover {
+    box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+   }
+
+   .info-right:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+   }
+
+.iconify {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+}
