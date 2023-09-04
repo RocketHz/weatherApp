@@ -16,15 +16,6 @@ body {
     backdrop-filter: blur(1px);
 }
 
-.container__title {
-    font-weight: 800;
-    text-align: center;
-}
-
-.container__subtitle {
-    text-align: center;
-}
-
 .background-image {
     background-repeat: no-repeat;
     background-size: cover;
@@ -115,4 +106,37 @@ body {
     right: 0;
     width: 100px;
     height: 100px;
+}
+
+@media (max-width: 455px) {
+    .card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 242px;
+        height: 343px;
+    }
+
+    .cloud{
+        position: relative;
+    }
+
+    .iconify{
+        position: relative;
+    }
+}
+
+@media (max-width: 345px) {
+    .card {
+        width: 204px;
+        height: 356px;
+    }
+
+    .cloud{
+        position: relative;
+    }
+
+    .iconify{
+        position: relative;
+    }
 }

@@ -68,7 +68,7 @@ function App() {
 
   return (
     <>
-      <div className="container">
+      <div className="container container--flex">
         <WeatherCard weather={ weather } temp={temp}/>
       </div>
     </>
