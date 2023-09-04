@@ -45,9 +45,7 @@ function App() {
 
   useEffect(() => {
     if (weather) {
-      
       const weatherName = weather?.weather[0].description
-      console.log(weatherName)
       const ApiKey = '39213290-5a92e53c8a7541ded26175db9'
       const url = `https://pixabay.com/api/?key=${ApiKey}&q=${weatherName}&image_type=photo`;
       
@@ -55,12 +53,17 @@ function App() {
         .then(res => {
           const randomIndex = Math.floor(Math.random() * res.data.hits.length);
           setImage(res.data.hits[randomIndex].largeImageURL);
-          document.body.style.backgroundImage = `url(${image})`
         }
         )
         .catch((err) => console.log(err));
       }
   }, [weather]);
+
+  useEffect(() => {
+    if (image) {
+      document.body.style.backgroundImage = `url(${image})`;
+    }
+  }, [image]);
 
 
   return (
